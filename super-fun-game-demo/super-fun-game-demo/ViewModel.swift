@@ -7,6 +7,7 @@ public protocol ViewModelInputs {
 
 public protocol ViewModelOutputs {
   var doSomething: Signal<String, NoError> { get }
+  var hint: Signal<String, NoError> { get }
 }
 
 public protocol ViewModelType {
@@ -21,6 +22,11 @@ public final class ViewModel: ViewModelType, ViewModelInputs, ViewModelOutputs {
     self.doSomething = self.actionButtonTappedProperty.signal
       .map { "Leave me alone!" }
 
+    // a11y
+    self.hint = self.actionButtonTappedProperty.signal
+      .map { "Prints message." }
+
+    // Tracking
     self.doSomething
       .observeNext { _ in AppEnvironment.current.panda.trackButtonTapped() }
   }
@@ -31,6 +37,7 @@ public final class ViewModel: ViewModelType, ViewModelInputs, ViewModelOutputs {
   }
 
   public let doSomething: Signal<String, NoError>
+  public let hint: Signal<String, NoError>
 
   public var inputs: ViewModelInputs { return self }
   public var outputs: ViewModelOutputs { return self }

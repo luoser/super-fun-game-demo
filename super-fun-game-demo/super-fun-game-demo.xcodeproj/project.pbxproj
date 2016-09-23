@@ -31,6 +31,7 @@
 		59EA5E9A1D8F14CB00B8F439 /* Panda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA5E981D8F14CB00B8F439 /* Panda.swift */; };
 		59EA5E9C1D94E3C400B8F439 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA5E9B1D94E3C400B8F439 /* AppEnvironment.swift */; };
 		59EA5E9D1D94E3C400B8F439 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA5E9B1D94E3C400B8F439 /* AppEnvironment.swift */; };
+		59EA5EA01D9509A200B8F439 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA5E9E1D9509A200B8F439 /* TestObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,7 @@
 		59EA5E951D8F084C00B8F439 /* MockTrackingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTrackingClient.swift; sourceTree = "<group>"; };
 		59EA5E981D8F14CB00B8F439 /* Panda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Panda.swift; sourceTree = "<group>"; };
 		59EA5E9B1D94E3C400B8F439 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		59EA5E9E1D9509A200B8F439 /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 				59EA5E571D8C655A00B8F439 /* ViewModel.swift */,
 				59EA5E771D8C67A500B8F439 /* ViewModelTests.swift */,
 				59EA5E981D8F14CB00B8F439 /* Panda.swift */,
+				59EA5E9E1D9509A200B8F439 /* TestObserver.swift */,
 				59EA5E9B1D94E3C400B8F439 /* AppEnvironment.swift */,
 				59EA5E7E1D8C6F4D00B8F439 /* TrackingClient.swift */,
 				59EA5E951D8F084C00B8F439 /* MockTrackingClient.swift */,
@@ -594,6 +597,7 @@
 			files = (
 				59EA5E791D8C67A500B8F439 /* ViewModelTests.swift in Sources */,
 				59EA5E7D1D8C6A8F00B8F439 /* ViewModel.swift in Sources */,
+				59EA5EA01D9509A200B8F439 /* TestObserver.swift in Sources */,
 				59A517881D8C5B140063E938 /* super_fun_game_demoTests.swift in Sources */,
 				59EA5E801D8C6F4D00B8F439 /* TrackingClient.swift in Sources */,
 				59EA5E941D8F081D00B8F439 /* TrackingClientType.swift in Sources */,

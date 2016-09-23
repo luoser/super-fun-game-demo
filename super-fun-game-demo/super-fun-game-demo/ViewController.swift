@@ -12,6 +12,11 @@ internal final class ViewController: UIViewController {
       .observeNext { [weak self] msg in
         self?.doSomething(msg)
     }
+
+    self.viewModel.outputs.hint
+      .observeNext { [weak self] hint in
+        self?.actionButton.accessibilityHint = hint
+    }
   }
 
   @IBAction private func actionButtonTapped() {
