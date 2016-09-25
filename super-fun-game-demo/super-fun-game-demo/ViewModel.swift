@@ -3,11 +3,9 @@ import Result
 
 public protocol ViewModelInputs {
   func actionButtonTapped()
-  func viewDidLoad()
 }
 
 public protocol ViewModelOutputs {
-  var buttonTitle: Signal<String, NoError> { get }
   var hint: Signal<String, NoError> { get }
   var image: Signal<UIImage?, NoError> { get }
   var scoreLabel: Signal<String, NoError> { get }
@@ -24,9 +22,6 @@ public final class ViewModel: ViewModelType, ViewModelInputs, ViewModelOutputs {
 
     let count = self.actionButtonTappedProperty.signal
       .scan(0) { acc, _ in acc + 1 }
-
-    self.buttonTitle = count
-      .map { _ in "Don't press me" }
 
     self.image = count
       .map {
@@ -48,7 +43,7 @@ public final class ViewModel: ViewModelType, ViewModelInputs, ViewModelOutputs {
 
     // a11y
     self.hint = self.actionButtonTappedProperty.signal
-      .map { "Prints message." }
+      .map { "Continues game play." }
 
     // Tracking
     self.actionButtonTappedProperty.signal
@@ -60,12 +55,6 @@ public final class ViewModel: ViewModelType, ViewModelInputs, ViewModelOutputs {
     self.actionButtonTappedProperty.value = ()
   }
 
-  private let viewDidLoadProperty = MutableProperty()
-  public func viewDidLoad() {
-    self.viewDidLoadProperty.value = ()
-  }
-
-  public let buttonTitle: Signal<String, NoError>
   public let hint: Signal<String, NoError>
   public let image: Signal<UIImage?, NoError>
   public let scoreLabel: Signal<String, NoError>
