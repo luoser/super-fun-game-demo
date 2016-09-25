@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,29 +15,55 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-oO-epA">
-                                <rect key="frame" x="248" y="285" width="104" height="30"/>
-                                <state key="normal" title="Don't press me"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJu-c2-P3g">
+                                <rect key="frame" x="20" y="20" width="360" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-6T-JH0">
+                                <rect key="frame" x="20" y="149" width="360" height="113"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-oO-epA">
+                                <rect key="frame" x="19.5" y="280" width="360" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Don't press me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="actionButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOl-q5-Mh9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BuI-oO-epA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VDh-v9-cbr"/>
-                            <constraint firstItem="BuI-oO-epA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WQF-tZ-qX9"/>
+                            <constraint firstItem="VcT-6T-JH0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DDL-gK-d0r"/>
+                            <constraint firstItem="VcT-6T-JH0" firstAttribute="bottom" secondItem="BuI-oO-epA" secondAttribute="top" constant="-18" id="Ds2-nK-c2Z"/>
+                            <constraint firstItem="RJu-c2-P3g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OvT-2I-mDQ"/>
+                            <constraint firstItem="RJu-c2-P3g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cjh-DK-JkP"/>
+                            <constraint firstItem="BuI-oO-epA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ejV-17-Zyz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RJu-c2-P3g" secondAttribute="trailing" id="gvv-qV-1AK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VcT-6T-JH0" secondAttribute="trailing" id="odc-vh-FmG"/>
+                            <constraint firstItem="BuI-oO-epA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pVI-hm-S1e"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
                     <connections>
                         <outlet property="actionButton" destination="BuI-oO-epA" id="49a-1l-TJA"/>
+                        <outlet property="imageView" destination="VcT-6T-JH0" id="o0l-fK-Ygw"/>
+                        <outlet property="scoreLabel" destination="RJu-c2-P3g" id="KPO-4L-A8i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="292" y="322"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left" width="120" height="113"/>
+    </resources>
 </document>

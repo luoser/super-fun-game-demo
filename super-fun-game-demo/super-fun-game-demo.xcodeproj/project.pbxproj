@@ -264,19 +264,19 @@
 			isa = PBXGroup;
 			children = (
 				59A517721D8C5B140063E938 /* AppDelegate.swift */,
+				59EA5E9B1D94E3C400B8F439 /* AppEnvironment.swift */,
+				59A517791D8C5B140063E938 /* Assets.xcassets */,
+				59A5177E1D8C5B140063E938 /* Info.plist */,
+				59A5177B1D8C5B140063E938 /* LaunchScreen.storyboard */,
+				59A517761D8C5B140063E938 /* Main.storyboard */,
+				59EA5E951D8F084C00B8F439 /* MockTrackingClient.swift */,
+				59EA5E981D8F14CB00B8F439 /* Panda.swift */,
+				59EA5E9E1D9509A200B8F439 /* TestObserver.swift */,
+				59EA5E7E1D8C6F4D00B8F439 /* TrackingClient.swift */,
+				59EA5E921D8F081D00B8F439 /* TrackingClientType.swift */,
 				59A517741D8C5B140063E938 /* ViewController.swift */,
 				59EA5E571D8C655A00B8F439 /* ViewModel.swift */,
 				59EA5E771D8C67A500B8F439 /* ViewModelTests.swift */,
-				59EA5E981D8F14CB00B8F439 /* Panda.swift */,
-				59EA5E9E1D9509A200B8F439 /* TestObserver.swift */,
-				59EA5E9B1D94E3C400B8F439 /* AppEnvironment.swift */,
-				59EA5E7E1D8C6F4D00B8F439 /* TrackingClient.swift */,
-				59EA5E951D8F084C00B8F439 /* MockTrackingClient.swift */,
-				59EA5E921D8F081D00B8F439 /* TrackingClientType.swift */,
-				59A517761D8C5B140063E938 /* Main.storyboard */,
-				59A517791D8C5B140063E938 /* Assets.xcassets */,
-				59A5177B1D8C5B140063E938 /* LaunchScreen.storyboard */,
-				59A5177E1D8C5B140063E938 /* Info.plist */,
 			);
 			path = "super-fun-game-demo";
 			sourceTree = "<group>";
