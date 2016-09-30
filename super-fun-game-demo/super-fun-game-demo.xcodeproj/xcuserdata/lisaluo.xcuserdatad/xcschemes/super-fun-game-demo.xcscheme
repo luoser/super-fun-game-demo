@@ -38,16 +38,6 @@
                ReferencedContainer = "container:super-fun-game-demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "59A5178D1D8C5B140063E938"
-               BuildableName = "super-fun-game-demoUITests.xctest"
-               BlueprintName = "super-fun-game-demoUITests"
-               ReferencedContainer = "container:super-fun-game-demo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

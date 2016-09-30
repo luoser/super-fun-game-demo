@@ -2,67 +2,41 @@ import ReactiveCocoa
 import Result
 
 public protocol ViewModelInputs {
-  func actionButtonTapped()
 }
 
 public protocol ViewModelOutputs {
-  var hint: Signal<String, NoError> { get }
-  var image: Signal<UIImage?, NoError> { get }
-  var scoreLabel: Signal<String, NoError> { get }
 }
 
-public protocol ViewModelType {
-  var inputs: ViewModelInputs { get }
-  var outputs: ViewModelOutputs { get }
-}
-
-public final class ViewModel: ViewModelType, ViewModelInputs, ViewModelOutputs {
+public final class ViewModel: ViewModelInputs, ViewModelOutputs {
 
   public init() {
-
-    let count = self.actionButtonTappedProperty.signal
-      .scan(0) { acc, _ in acc + 1 }
-
-    self.image = count
-      .map {
-        switch $0 {
-        case 0:
-          return nil
-        case 1...5:
-          return UIImage(named: "1")
-        case 5...10:
-          return UIImage(named: "2")
-        case 10...20:
-          return UIImage(named: "3")
-        default:
-          return UIImage(named: "4")
-        }
-    }
-
-    self.scoreLabel = count.map { String($0) }
-
-    // a11y
-    self.hint = self.actionButtonTappedProperty.signal
-      .map { "Continues game play." }
-
-    // Tracking
-    self.actionButtonTappedProperty.signal
-      .observeNext { _ in AppEnvironment.current.panda.trackButtonTapped() }
   }
-
-  private let actionButtonTappedProperty = MutableProperty()
-  public func actionButtonTapped() {
-    self.actionButtonTappedProperty.value = ()
-  }
-
-  public let hint: Signal<String, NoError>
-  public let image: Signal<UIImage?, NoError>
-  public let scoreLabel: Signal<String, NoError>
-
-  public var inputs: ViewModelInputs { return self }
-  public var outputs: ViewModelOutputs { return self }
 }
 
-private func isGameOver(score score: Int) -> Bool {
-  return score == 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private func imageNameFor(score score: Int) -> String {
+  switch score {
+  case 0...3:
+    return "happy"
+  case 4...7:
+    return "content"
+  default:
+    return "grumpy"
+  }
 }
